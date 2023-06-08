@@ -1,0 +1,218 @@
+------------ Continious Changes ------------
+atk1 = atk +1
+atk2 = atk +2
+atk3 = atk +3
+atkm = atk MAX (+6)
+atk1? = atk +1 (20%)
+atk1! = atk +1 (70%)
+atk2? = atk +2 (10%)
+atk-1 = atk -1
+atk-2 = atk -2
+atk0 = atk reset
+
+def1 = def +1
+def2 = def +2
+def3 = def +3
+defm = def MAX
+def1? = def +1 (20%)
+def1! = def +1 (70%)
+def2? = def +2 (10%)
+def-1 = def -1
+def-2 = def -2
+def0 = def reset
+
+spa1 = sp. atk + 1
+spa2 = sp. atk + 2
+spa3 = sp. atk + 3
+spam = sp. atk MAX
+spa1? = sp. atk + 1 (20%)
+spa1! = sp. atk + 1 (70%)
+spa2? = sp. atk + 2 (10%)
+spa-1 = sp. atk - 1
+spa-2 = sp. atk - 2
+spa0 = sp. atk reset
+
+spd1 = sp. def + 1
+spd2 = sp. def + 2
+spd3 = sp. def + 3
+spdm = sp. def MAX
+spd1? = sp. def + 1 (20%)
+spd1! = sp. def + 1 (70%)
+spd2? = sp. def + 2 (10%)
+
+acc1 = Accuracy + 1 (+33%)
+acc2 = Accuracy + 2
+accm = Accuracy MAX (+4)
+acc1? = Accuracy + 1 (20%)
+acc-1 = Accuracy - 1 (-15%)
+acc-2 = Accuracy - 2
+acc0 = Accuracy Reset
+
+------------ Temporary Changes ------------
+crit1 = Critical Hit Rate + 1
+crit2 = Critical Hit Rate + 2
+crit3 = Critical Hit Rate + 3 (Always Critical Hit)
+crit-1 = Critical Hit Rate - 1 (-50%)
+crit-2 = Critical Hit Rate - 2 (-90%)
+crit-3 = Critical Hit Rate - 3 (Never Critical Hit)
+
+------------ Special Conditions (Enemy) ------------
+psn? = Poison (10%)
+psn% = Poison (20%)
+psn! = Poison (30%)
+psn = Poison
+
+bps? = Badly Poison (10%)
+bps% = Badly Poison (15%)
+bps! = Badly Poison (20%)
+bps = Badly Poison
+
+brn? = Burned (10%)
+brn% = Burned (20%)
+brn! = Burned (30%)
+brn* = Burned (50%)
+brn = Burned
+
+prz? = Paralyzed (10%)
+prz% = Paralyzed (20%)
+prz! = Paralyzed (30%)
+prz* = Paralyzed (50%)
+prz = Paralyzed
+
+slp? = Sleep (10%)
+slp = Sleep
+
+psnh = Heal Poison / Toxic
+brnh = Heal Burned
+przh = Heal Paralyzed
+slph = Wake Up
+sclr = Clear All Conditions
+
+------------ Special Condition (Self) ------------
+
+slfp = Self Poison
+slft = Self Toxic
+slfb = Self Burn
+slfs = Self Sleep
+slfz = Self Paralyze
+
+------------ Damage Bonus ------------
+
+sc+ = In Special Condition (Self) --> 150%
+sc* = In Special Condition (Self) --> 200%
+sc; = In Special Condition (Self) --> Fail
+
+esc+ = In Special Condition (Enemy) --> 150%
+esc* = In Special Condition (Enemy) --> 200%
+esc- = In Special Condition (Enemy) --> 50%
+esc; = In Special Condition (Enemy) --> Fail
+
+se+ = Super Effective --> 120%
+se* = Super Effective --> 150%
+se- = Super Effective --> 50%
+se; = Super Effective --> Fail
+
+nve+ = Not Very Effective --> 150%
+nve* = Not Very Effective --> 250%
+nve- = Not Very Effective --> 50%
+
+dmg+ = Damaged --> 150%
+dmg* = Damaged --> 200%
+dmg- = Damaged --> 50%
+dmg; = Damaged --> Fail
+
+ndmg+ = Not Damaged --> 150%
+ndmg* = Not Damaged --> 200%
+
+fst+ = First --> 150%
+fst* = First --> 200%
+fst- = First --> 50%
+
+snd+ = Second --> 150%
+snd* = Second --> 200%
+snd; = Second --> Fail
+
+------------ HP Recover/ Recoil ------------
+
+hp+ = Recover 10% HP
+hp++ = Recover 20% HP
+hp* = Recover 50% HP
+hp** = Recover 75% HP
+hpd+ = Recover 20% of damage dealt
+hpd++ = Recover 30% of damage dealt
+hpd* = Recover 50% of damage dealt
+hpd** = Recover 75% of damage dealt
+
+hp- = Lose 10% HP
+hp-- = Lose 25% HP
+hp/ = Lose 50% HP
+hp// = Lose 75% HP
+hp~ = Reduce HP to 1
+hpd- = 20% Recoil
+hpd-- = 30% Recoil
+hpd/ = 50% Recoil
+hpd// = 75% Recoil
+
+nrhp+ = Next Round HP +30%
+nrhp++ = Next Round HP +50%
+nrhp* = Next Round HP +75%
+nrhp** = Next Round HP Full
+
+------------ Flinch / Charge ------------
+
+rce1 = Recharge 1 Round
+rce2 = Recharge 2 Rounds
+
+ceb1 = Charge 1 Round before use
+ceb1s = Charge 1 Round before use (Except Sunny)
+ceb1r = Charge 1 Round before use (Except Rainy)
+ceb1n = Charge 1 Round before use (Except Snowy)
+ceb1t = Charge 1 Round before use (Except Sandstorm)
+
+ceb1gt = Charge 1 Round before use (Except Grassy Terrain)
+ceb1pt = Charge 1 Round before use (Except Psychic Terrain)
+ceb1mt = Charge 1 Round before use (Except Misty Terrain)
+ceb1et = Charge 1 Round before use (Except Electric Terrain)
+ceb1tt = Charge 1 Round before use (Except Toxic Terrain)
+ceb1dt = Charge 1 Round before use (Except Dragon Terrain)
+
+fln? = Flinch (10%)
+fln% = Flinch (20%)
+fln! = Flinch (50%)
+fln = Flinch
+
+------------ Usage Conditions ------------
+
+nfhp; = Not Full HP --> Fail
+hpdg; = Danger HP (<50%) --> Fail
+nhpdg; = Non-Danger HP --> Fail
+n1hp; = Not 1 HP --> Fail
+
+niu = Non-Instant Use after switch/start --> Fail
+
+------------ OHKO ------------
+
+ohko = Instant OHKO
+sohko = Instant OHKO (Self)
+
+ohko? = OHKO (5%)
+ohko% = OHKO (10%)
+ohko! = OHKO (20%)
+
+sohko? = S-OHKO (5%)
+sohko% = S-OHKO (10%)
+sohko! = S-OHKO (20%)
+
+------------ Stats Change (Enemy) ------------
+idk just add "e" in front of any changes
+
+------------ Others ------------
+
+a2 = Attack twice
+a25 = Attack 2~5 times
+
+nes = No Escape
+
+sny+ = Sunny --> 150%
+
+lsd = Leech Seed

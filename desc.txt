@@ -1,0 +1,37 @@
+Lower = -1
+Harshly Lower = -2
+Critically Lower = -3
+
+Increase = +1
+Sharply Increase = +2
+Critically Increase = +3
+Max Out = +6
+
+Take Recoil = 20%
+Take Big Recoil = 30%
+Take Huge Recoil = 50%
+
+Barely = 5%
+Sometimes = 10%
+Might = 20%
+Frequently = 30%
+Big Chance to = 50%
+Usually = 70%
+
+Usually goes first = +1 prio.
+Frequently goes first = +2 prio.
+High Chance of going first = +3 prio.
+Nearly Always goes first = +4~7 prio.
+
+Usually goes last = -1 prio.
+Frequently goes last = -2 prio.
+High Chance of going last = -3 prio.
+Nearly Always goes last = -4~6 prio.
+
+Better chance to critical hit = +1 rate
+Much Better chance to critical hit = +2 rate
+Always critical hit = +3 rate
+
+Worse chance to critical hit = -1 rate
+Slight chance to critical hit = -2 rate
+Impossible to critical hit = -3 rate
