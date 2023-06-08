@@ -24,7 +24,7 @@ class Pokemon:
             print("That move number doesn't exist!")
         else:
             dmg = self.moves[move][0]
-            enemy.hp -= dmg * self.checkType()
+            enemy.hp -= dmg * self.checkType()9
             print(self.name + " used " + move + "! " + enemy.name + " took " + str(dmg) + " damage.")
             print(enemy.name + "'s HP is now " + str(enemy.hp))
         if enemy.hp == 0:
@@ -81,7 +81,7 @@ class Mossprout(Pokemon):
           16,
           17
         ]
-        super().__init__("Mossprout", ["Grass"], moves, 55, 40, 65, 40, 65, 50, 5)
+        super().__init__("Mossprout", ["Grass"], "Overgrow", "Clear Body", moves, 55, 40, 65, 40, 65, 50, 5)
 
 class Florisprout(Pokemon):
     def __init__(self):
@@ -118,7 +118,7 @@ class Florisprout(Pokemon):
           33,
           35
         ]
-        super().__init__("Florisprout", ["Grass"], moves, 75, 55, 80, 60, 80, 75, 18)
+        super().__init__("Florisprout", ["Grass"], "Overgrow", "Clear Body", moves, 75, 55, 80, 60, 80, 75, 18)
 
 class Foliageon(Pokemon):
     def __init__(self):
@@ -162,7 +162,7 @@ class Foliageon(Pokemon):
           62,
           70
         ]
-        super().__init__("Foliageon", ["Grass","Poison"], moves, 90, 85, 90, 85, 90, 90, 36)
+        super().__init__("Foliageon", ["Grass","Poison"], "Overgrow", "Clear Body", moves, 90, 85, 90, 85, 90, 90, 36)
 
 class Infernite:
   def __init__(self):
@@ -194,7 +194,7 @@ class Infernite:
           16,
           17
         ]
-        super().__init__("Infernite", "Fire", moves, 55, 40, 65, 40, 65, 50, 5)
+        super().__init__("Infernite", ["Fire"] , "Blaze", "Flame Body", moves, 55, 40, 65, 40, 65, 50, 5)
 def newPoke(name, type,crm, moves, h, a, d, sa, sd, sp, nl, nm, lv):
   
   Pokemon().__init__(name, type, crm, moves, h, a, d, sa, sd, sp, nl, nm, lv)
