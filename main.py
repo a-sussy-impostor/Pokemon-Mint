@@ -3,7 +3,6 @@ from pokemon import *
 
 import random
 
-# clock = pygame.time.Clock()
 # Initialize game variables
 player = None
 current_location = None
@@ -26,7 +25,6 @@ class Location:
 def new_game():
     # Initialize player
     name = input("What is your name? ")
-    pokemon = Pikachu()
     global player
     player = Player(name, pokemon)
     print("Welcome, " + player.name + "!")
