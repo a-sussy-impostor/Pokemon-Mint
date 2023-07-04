@@ -1,8 +1,9 @@
 # from battle import *
-from pokemon import *
+from starters import *
 
 import random
 
+# clock = pygame.time.Clock()
 # Initialize game variables
 player = None
 current_location = None
@@ -25,6 +26,7 @@ class Location:
 def new_game():
     # Initialize player
     name = input("What is your name? ")
+    pokemon = Pikachu()
     global player
     player = Player(name, pokemon)
     print("Welcome, " + player.name + "!")
@@ -35,7 +37,8 @@ def new_game():
     game_loop()
 def game_loop():
     while True:
-        # Handle event
+        # Handle events
+        handle_events()
         # Check for wild Pokémon encounters
         global wild_pokemon
         if random.random() < encounter_probability:
@@ -44,8 +47,17 @@ def game_loop():
         # Render game world
         render_world()
         # Update display
+        pygame.display.update()
         clock.tick(60)
-
+def handle_events():
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            quit()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                global direction
+                direction = "north"
 def render_world():
     # Draw current location
     print(current_location.name, 100)

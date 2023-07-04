@@ -1,12 +1,11 @@
 
 class Pokemon:
-    def __init__(self, name, type, alt, halt, moves, hp, atk, df, spa, spd, spe, nml, nm, level):
-        self.name = name # name
-        self.type = type # type
-        self.alt = alt # ability
-        self.halt = halt #hidden abillity
-        self.moves = moves #moves
-        self.level = level 
+    def __init__(self, name, type, crm, moves, hp, atk, df, spa, spd, spe, nml, nm, level):
+        self.name = name
+        self.type = type
+        self.crm = crm
+        self.moves = moves
+        self.level = level
         sl = self.level - 1
         self.hp = hp + sl *2
         self.atk = atk + sl * 2
@@ -15,7 +14,7 @@ class Pokemon:
         self.spd = spd + sl * 2
         self.spe = spe + sl * 2
         self.exp = 0
-        self.next_level_exp = 100 * (2 ** (self.level - 1))
+        self.next_level_exp = 100 * self.level
     def checkType(type, enemy):
       if type == enemy.type:
         pass
@@ -24,7 +23,7 @@ class Pokemon:
             print("That move number doesn't exist!")
         else:
             dmg = self.moves[move][0]
-            enemy.hp -= dmg * self.checkType()9
+            enemy.hp -= dmg * self.checkType()
             print(self.name + " used " + move + "! " + enemy.name + " took " + str(dmg) + " damage.")
             print(enemy.name + "'s HP is now " + str(enemy.hp))
         if enemy.hp == 0:
@@ -81,7 +80,7 @@ class Mossprout(Pokemon):
           16,
           17
         ]
-        super().__init__("Mossprout", ["Grass"], "Overgrow", "Clear Body", moves, 55, 40, 65, 40, 65, 50, 5)
+        super().__init__("Mossprout", ["Grass"], moves, 55, 40, 65, 40, 65, 50, 5)
 
 class Florisprout(Pokemon):
     def __init__(self):
@@ -101,7 +100,7 @@ class Florisprout(Pokemon):
             # Move Name: Damage, Type, Kind, PP, Accuracy, Special Effects
             # Kinds: 0 --> Physical ; 1 --> Special ; 2 --> Other
             # Accuracy 0 --> Can't Miss
-            "Jumpscare": [0,"Normal",2,20,70,["eacc-1","espd-1],"Hide and suddenly show to scare target. Lower target's accuracy and speed."],
+            "Jumpscare": [0,"Normal",2,20,70,["eacc-2"],"Hide and suddenly show to scare target. Harshly lower target's accuracy."],
             "Magic Leaf": [60,"Grass",1,25,0,[None],"Use following leafs to attack. Can't miss."],
             "Seed Bomb": [80,"Grass",1,20,100,[None],"Use seed to attack."],
             "Poison Punch": [75,"Poison",0,20,100,["psn?"],"Fill the claws or hands with poisonous liquid then attack. Sometimes poisons the target."],
@@ -118,7 +117,7 @@ class Florisprout(Pokemon):
           33,
           35
         ]
-        super().__init__("Florisprout", ["Grass"], "Overgrow", "Clear Body", moves, 75, 55, 80, 60, 80, 75, 18)
+        super().__init__("Florisprout", ["Grass"], moves, 75, 55, 80, 60, 80, 75, 18)
 
 class Foliageon(Pokemon):
     def __init__(self):
@@ -162,7 +161,7 @@ class Foliageon(Pokemon):
           62,
           70
         ]
-        super().__init__("Foliageon", ["Grass","Poison"], "Overgrow", "Clear Body", moves, 90, 85, 90, 85, 90, 90, 36)
+        super().__init__("Foliageon", ["Grass","Poison"], moves, 90, 85, 90, 85, 90, 90, 36)
 
 class Infernite:
   def __init__(self):
@@ -194,7 +193,7 @@ class Infernite:
           16,
           17
         ]
-        super().__init__("Infernite", ["Fire"] , "Blaze", "Flame Body", moves, 55, 40, 65, 40, 65, 50, 5)
+        super().__init__("Mossprout", "Grass", moves, 55, 40, 65, 40, 65, 50, 5)
 def newPoke(name, type,crm, moves, h, a, d, sa, sd, sp, nl, nm, lv):
   
   Pokemon().__init__(name, type, crm, moves, h, a, d, sa, sd, sp, nl, nm, lv)
