@@ -164,7 +164,7 @@ class Foliageon(Pokemon):
         ]
         super().__init__("Foliageon", ["Grass","Poison"], "Overgrow", "Clear Body", moves, 90, 85, 90, 85, 90, 90, 36)
 
-class Infernit:
+class Infernite:
   def __init__(self):
         moves = {
             "Tackle": [40,"Normal",0,20,100,[None],"Use body to hit and attack."],
@@ -194,7 +194,7 @@ class Infernit:
           16,
           17
         ]
-        super().__init__("Infernit", ["Fire"] , "Blaze", "Flame Body", moves, 55, 40, 65, 40, 65, 50, 5)
-def newPoke(name, type,alt,halt, moves, h, a, d, sa, sd, sp, nl, nm, lv):
+        super().__init__("Infernite", ["Fire"] , "Blaze", "Flame Body", moves, 55, 40, 65, 40, 65, 50, 5)
+def newPoke(name, type,crm, moves, h, a, d, sa, sd, sp, nl, nm, lv):
   
-  Pokemon().__init__(name, type, alt, halt, moves, h, a, d, sa, sd, sp, nl, nm, lv)
+  Pokemon().__init__(name, type, crm, moves, h, a, d, sa, sd, sp, nl, nm, lv)
