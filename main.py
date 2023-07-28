@@ -45,7 +45,7 @@ def game_loop():
         # Check for wild Pokémon encounters
         global wild_pokemon
         if random.random() < encounter_probability:
-            wild_pokemon = 
+            wild_pokemon = None
             print("A wild " + wild_pokemon.name + " appeared!")
         # Render game world
         render_world()
