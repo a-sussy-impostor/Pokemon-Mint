@@ -30,7 +30,7 @@ def new_game():
         name = "Player"
     rivalName = input("What is your rival's name? \n Name: ")
     if rivalName == "":
-        
+        rivalName = "Rival"
     global player
     player = Player(name, [])
     print("Welcome, " + player.name + "!")
