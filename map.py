@@ -50,5 +50,4 @@ def init_raid(area, chance = random.uniform(0.0101,0.0499): # towns/cities/dunge
   return area_new
 
 marusha = [
-wall_t,wall_t,wall_t,wall_t,exit_n,exit_n,wall_t,wall_t
-pokecenter
+wall_t,wall_t,wall_t,wall_t,exit_n,exit_n,wall_t,wall_t]
