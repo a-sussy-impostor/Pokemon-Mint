@@ -1,45 +1,51 @@
 # from battle import *
 from pokemon import *
-
+from map import *
 import random
 
 # Initialize game variables
 player = None
-current_location = None
+located = None
 wild_pokemon = None
 direction = None
-encounter_probability = 0.1
+encounter_probability = random.uniform(0.03,0.2)
 # Define game classes
 class Player:
     def __init__(self, name, pokemon):
-        self.name = name
-        self.pokemon = pokemon
-        self.money = 0
+        self.name = name # str
+        self.pokemon = pokemon # array
+        self.money = 10000 # int
 class Location:
-    def __init__(self, name, description, exits):
+    def __init__(self, name, description, wild, map):
         self.name = name
         self.description = description
-        self.exits = exits
+        self.pokemon = wild # Wild Pokemon Array
+        self.map = map # The Whole Enviroment Overview Of The Location
 
 # Define game functions
 def new_game():
     # Initialize player
-    name = input("What is your name? ")
+    name = input(f"Welcome to the world of {red}Pokemon{reset}! What is your name? \n Name: ")
+    if name == "":
+        name = "Player"
+    rivalName = input("What is your rival's name? \n Name: ")
+    if rivalName == "":
+        
     global player
-    player = Player(name, pokemon)
+    player = Player(name, [])
     print("Welcome, " + player.name + "!")
     # Initialize game world
     global current_location
-    current_location = Location("Pallet Town", "You are in a small town with a few houses and a lab to the north.", {"north": "Lab"})
+    current_location = Location("Marusha Town", f"A small town where {player.name}'s home and {rivalName}'s home located in.",)
     # Start game loop
     game_loop()
+
 def game_loop():
     while True:
-        # Handle event
         # Check for wild Pokémon encounters
         global wild_pokemon
         if random.random() < encounter_probability:
-            wild_pokemon = Charmander()
+            wild_pokemon = 
             print("A wild " + wild_pokemon.name + " appeared!")
         # Render game world
         render_world()
