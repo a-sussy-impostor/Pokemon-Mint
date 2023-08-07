@@ -24,7 +24,7 @@ class Pokemon:
             print("That move number doesn't exist!")
         else:
             dmg = self.moves[move][0]
-            enemy.hp -= dmg * self.checkType()9
+            enemy.hp -= dmg * self.checkType()
             print(self.name + " used " + move + "! " + enemy.name + " took " + str(dmg) + " damage.")
             print(enemy.name + "'s HP is now " + str(enemy.hp))
         if enemy.hp == 0:
