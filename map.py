@@ -38,7 +38,8 @@ exit_e_t = purple + "→" + reset
 
 raid_t = bold + red + "▲" + reset
 
-def init_raid(area, chance = random.uniform(0.0101,0.0499): # towns/cities/dungeons/towers/entraces dont have raid
+def init_raid(area, chance = random.uniform(0.0101,0.0499): 
+  # towns/cities/dungeons/towers/entraces dont have raid
   global raid_t
   area_new = area
   for r in range(len(area)):
