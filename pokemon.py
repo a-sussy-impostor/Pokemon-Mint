@@ -24,7 +24,7 @@ class Pokemon:
             print("That move number doesn't exist!")
         else:
             dmg = self.moves[move][0]
-            enemy.hp -= dmg * self.checkType()9
+            enemy.hp -= dmg * self.checkType()
             print(self.name + " used " + move + "! " + enemy.name + " took " + str(dmg) + " damage.")
             print(enemy.name + "'s HP is now " + str(enemy.hp))
         if enemy.hp == 0:
@@ -101,7 +101,7 @@ class Florisprout(Pokemon):
             # Move Name: Damage, Type, Kind, PP, Accuracy, Special Effects
             # Kinds: 0 --> Physical ; 1 --> Special ; 2 --> Other
             # Accuracy 0 --> Can't Miss
-            "Jumpscare": [0,"Normal",2,20,70,["eacc-1","espd-1],"Hide and suddenly show to scare target. Lower target's accuracy and speed."],
+            "Jumpscare": [0,"Normal",2,20,70,["eacc-1","espd-1"],"Hide and suddenly show to scare target. Lower target's accuracy and speed."],
             "Magic Leaf": [60,"Grass",1,25,0,[None],"Use following leafs to attack. Can't miss."],
             "Seed Bomb": [80,"Grass",1,20,100,[None],"Use seed to attack."],
             "Poison Punch": [75,"Poison",0,20,100,["psn?"],"Fill the claws or hands with poisonous liquid then attack. Sometimes poisons the target."],
